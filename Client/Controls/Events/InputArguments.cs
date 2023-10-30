@@ -11,7 +11,7 @@ namespace ase_chess.Client.Controls.Events
     {
         public char key;
 
-        public InputArguments(Control control, char key) : base(control)
+        public InputArguments(Control control, char key) : base()
         {
             this.key = key;
         }

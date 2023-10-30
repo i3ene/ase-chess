@@ -11,12 +11,12 @@ namespace ase_chess.Client.Controls.Events
     {
         public string[] arguments;
 
-        public CommandArguments(Control control, string[] arguments) : base(control)
+        public CommandArguments(Control control, string[] arguments) : base()
         {
             this.arguments = arguments;
         }
 
-        public CommandArguments(Control control, string command) : base(control)
+        public CommandArguments(Control control, string command) : base()
         {
             arguments = command.Split(' ');
         }
