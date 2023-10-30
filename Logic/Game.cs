@@ -1,4 +1,8 @@
 ﻿using ase_chess.Logic.Chess;
+using ase_chess.Logic.Chess.Boards;
+using ase_chess.Logic.Chess.Pieces;
+using ase_chess.Logic.Chess.Pieces.Instances;
+using ase_chess.Logic.Chess.Players;
 using System;
 using System.Collections.Generic;
 using System.Linq;

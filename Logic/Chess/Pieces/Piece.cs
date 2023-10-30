@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ase_chess.Logic.Chess
+namespace ase_chess.Logic.Chess.Pieces
 {
     public class Piece
     {

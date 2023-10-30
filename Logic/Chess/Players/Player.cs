@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ase_chess.Logic.Chess.Pieces.Instances;
 
-namespace ase_chess.Logic.Chess
+namespace ase_chess.Logic.Chess.Players
 {
     public class Player
     {
@@ -18,12 +19,12 @@ namespace ase_chess.Logic.Chess
         public Player(Color color)
         {
             this.color = color;
-            this.pieces = new List<BoardPiece>();
+            pieces = new List<BoardPiece>();
         }
 
         public void addPiece(BoardPiece piece)
         {
-            this.pieces.Add(new PlayerPiece(piece, this));
+            pieces.Add(new PlayerPiece(piece, this));
         }
 
         public void addPieces(BoardPiece[] pieces)

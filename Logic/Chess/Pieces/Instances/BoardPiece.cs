@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ase_chess.Logic.Chess.Boards;
+using ase_chess.Logic.Chess.Pieces;
 
-namespace ase_chess.Logic.Chess
+namespace ase_chess.Logic.Chess.Pieces.Instances
 {
     public class BoardPiece : Piece, IBoardObject
     {
@@ -13,7 +15,7 @@ namespace ase_chess.Logic.Chess
 
         public BoardPiece(PieceType type, Color color) : base(type, color)
         {
-            this.position = new Position();
+            position = new Position();
         }
 
         public BoardPiece(PieceType type, Color color, Position position) : base(type, color)
@@ -24,7 +26,7 @@ namespace ase_chess.Logic.Chess
         public static char getIcon(PieceType type, Color color)
         {
             int pieces = Enum.GetNames(typeof(PieceType)).Length;
-            int code = UNICODE_OFFSET + (int)type + ((int)color * pieces);
+            int code = UNICODE_OFFSET + (int)type + (int)color * pieces;
             return (char)code;
         }
     }

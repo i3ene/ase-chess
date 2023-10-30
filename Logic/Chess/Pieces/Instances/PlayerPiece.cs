@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ase_chess.Logic.Chess.Boards;
+using ase_chess.Logic.Chess.Pieces;
+using ase_chess.Logic.Chess.Players;
 
-namespace ase_chess.Logic.Chess
+namespace ase_chess.Logic.Chess.Pieces.Instances
 {
     public class PlayerPiece : BoardPiece, IPlayerObject
     {

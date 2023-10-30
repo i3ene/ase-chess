@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ase_chess.Logic.Chess
+namespace ase_chess.Logic.Chess.Boards
 {
     public class Board
     {
@@ -17,7 +17,7 @@ namespace ase_chess.Logic.Chess
 
         public Board()
         {
-            this.objects = new List<IBoardObject>();
+            objects = new List<IBoardObject>();
         }
 
         public IBoardObject? getObject(int x, int y)
