@@ -176,13 +176,24 @@ namespace ase_chess.Client.Rendering.Windows
             }
         }
 
-        public void add(string line)
+        public virtual void addLine(string line)
         {
             lines.Add(line);
             if (lines.Count > height) lines.RemoveAt(0);
         }
 
-        public string renderLine(int index)
+        public virtual string getLine(int index)
+        {
+            if (index >= lines.Count || index < 0) return "";
+            return lines[index];
+        }
+
+        public virtual int getLineCount()
+        {
+            return lines.Count;
+        }
+
+        public virtual string renderLine(int index)
         {
             string line = "";
 
@@ -212,9 +223,9 @@ namespace ase_chess.Client.Rendering.Windows
                 break;
             }
 
-            int offsetIndex = alignVertical(index, lines.Count, height);
+            int offsetIndex = alignVertical(index, getLineCount(), height);
             if (border != BorderStyle.None && verticalAlign == VerticalAlignment.Top) offsetIndex--;
-            if (offsetIndex >= 0 && offsetIndex < lines.Count) line += lines[offsetIndex];
+            line += getLine(offsetIndex);
 
             line = alignHorizontal(line, width);
             if (border != BorderStyle.None) line = drawBorder(line, index);
@@ -288,7 +299,7 @@ namespace ase_chess.Client.Rendering.Windows
             return line;
         }
 
-        public List<string> render()
+        public virtual List<string> render()
         {
             List<string> lines = new List<string>();
             for (int i = 0; i < height; i++)
