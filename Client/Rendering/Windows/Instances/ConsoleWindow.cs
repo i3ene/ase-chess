@@ -13,6 +13,7 @@ namespace ase_chess.Client.Rendering.Windows.Instances
 
         public ConsoleWindow(int width, int height) : base(width, height)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Update += (window) => render();
         }
 

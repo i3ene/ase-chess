@@ -12,7 +12,9 @@ namespace ase_chess.Client.Rendering.Windows.Instances
     {
         public ChatWindow() : base(64, 8)
         {
-
+            addLine("--This could be a chat--".Col(Format.Color.GREEN));
+            addLine("Message1");
+            addLine("Message2");
         }
 
         public override void addLine(string line)
